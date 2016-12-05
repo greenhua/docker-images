@@ -16,6 +16,7 @@ RUN sed -i -e 's/Defaults    requiretty.*/ #Defaults    requiretty/g' /etc/sudoe
 RUN sudo -u mysql /usr/sbin/mysqld --initialize-insecure
 
 COPY etc/supervisord.conf /etc/supervisord.conf
+COPY etc/httpd/conf/httpd.conf /etc/httpd/conf/
 
 EXPOSE 80
 
