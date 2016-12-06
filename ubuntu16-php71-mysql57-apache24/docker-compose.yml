@@ -1,0 +1,11 @@
+version: '2'
+services:
+  web:
+    build: .
+    ports:
+      - 8000:80
+    environment:
+      - DEBUG=true
+      - TERM=xterm
+    volumes:
+      - ../../:/var/www
